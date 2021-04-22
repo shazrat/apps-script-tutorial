@@ -33,14 +33,15 @@ function insertJournalTemplate() {
     return;
   }
   
-  var date = Utilities.formatDate(new Date(), "GMT-7", "EEEE MM/dd/yyyy h:mm a");
+  var date = Utilities.formatDate(new Date(), "GMT-5", "EEEE MM/dd/yyyy h:mm a");
   body.insertParagraph(index, date).setHeading(DocumentApp.ParagraphHeading.HEADING2);
   body.insertParagraph(index + 1, 'Mood: ').setHeading(DocumentApp.ParagraphHeading.HEADING3);
-  // var line = body.insertHorizontalRule(index + 5);    
 
   var affirmation = getAffirmation(body, index);
 
   body.insertParagraph(index + 2, affirmation).setHeading(DocumentApp.ParagraphHeading.HEADING4);
+  
+  var line = body.insertHorizontalRule(index + 3); 
 
 }
 
