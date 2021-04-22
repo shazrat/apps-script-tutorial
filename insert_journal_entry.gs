@@ -48,9 +48,6 @@ function getAffirmation() {
 	const url = "https://www.affirmations.dev";
 	const response = UrlFetchApp.fetch(url, {
 		"method": "GET"
-		// "headers": {
-		// 	"Accept": "application/json"
-		// }
 	});
 
   Logger.log(response)
